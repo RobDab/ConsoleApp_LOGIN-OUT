@@ -91,9 +91,18 @@ namespace ConsoleApp_LOGIN_OUT.Classes
         public static void DisplayAccessLog()
         {
             Console.WriteLine("\n<><><><><><><><><><><>");
-            foreach (DateTime log in AccessLog)
+            if (AccessLog.Count == 0)
             {
-                Console.WriteLine($"\n< {log.ToLocalTime().ToString()} >");
+
+                Console.WriteLine("- No log to be displayed -");
+            }
+            else
+            {
+                
+                foreach (DateTime log in AccessLog)
+                {
+                    Console.WriteLine($"\n< {log.ToLocalTime().ToString()} >");
+                }
             }
             Console.WriteLine("\n<><><><><><><><><><><>");
         }

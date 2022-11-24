@@ -60,6 +60,7 @@ namespace ConsoleApp_LOGIN_OUT
             switch (Input)
             {
                 case "1":
+
                     if (!User.isLogged)
                     {
                         User.Login();
@@ -70,13 +71,16 @@ namespace ConsoleApp_LOGIN_OUT
                         Console.WriteLine("Already Logged-in!");
                     }
                     break;
+
+
                 case "2":
+
                     User.Logout();
 
                     break;
 
-                case "3":
 
+                case "3":
 
                     if (User.isLogged)
                     {
@@ -90,11 +94,14 @@ namespace ConsoleApp_LOGIN_OUT
 
                     break;
 
+
                 case "4":
-                    // creare metodo in user per display access log
+                    
                     User.DisplayAccessLog();
 
                     break;
+
+
                 case "q":
                     Console.WriteLine("\n*** Come back soon!! >_<'\n" +
                         "'enter' to quit.");
